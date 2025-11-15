@@ -67,10 +67,14 @@ class Board:
         return row * self.cols + col
 
     def is_inbounds(self, col: int, row: int) -> bool:
-        # TODO: Return True if (col,row) is inside the board bounds.
-        pass
+        return 0 <= col < self.cols and 0 <= row < self.rows
 
     def neighbors(self, col: int, row: int) -> List[Tuple[int, int]]:
+        for i in range(3):
+            for j in range(3):
+                if i == j == 1:
+                    continue
+                
         # TODO: Return list of valid neighboring coordinates around (col,row).
         # deltas = [
         #     (-1, -1), (0, -1), (1, -1),
