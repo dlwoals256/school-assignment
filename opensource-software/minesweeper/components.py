@@ -84,7 +84,6 @@ class Board:
         return result
 
     def place_mines(self, safe_col: int, safe_row: int) -> None:
-        # TODO: Place mines randomly, guaranteeing the first click and its neighbors are safe. And Compute adjacency counts
         all_positions = [(c, r) for r in range(self.rows) for c in range(self.cols)]
         forbidden = {(safe_col, safe_row)} | set(self.neighbors(safe_col, safe_row))
         pool = [p for p in all_positions if p not in forbidden]
@@ -109,15 +108,31 @@ class Board:
         self._mines_placed = True
 
     def reveal(self, col: int, row: int) -> None:
-        # TODO: Reveal a cell; if zero-adjacent, iteratively flood to neighbors.
-        # if not self.is_inbounds(col, row):
-        #     return
-        # if not self._mines_placed:
-        #     self.place_mines(col, row)
-
+        if not self.is_inbounds(col, row):
+            return
         
-        # self._check_win()
-        pass
+        if not self._mines_placed:
+            self.place_mines(col, row)
+        
+        cell = self.cells[self.index(col, row)]
+
+        if cell.state.is_revealed or cell.state.is_flagged:
+            return
+        
+        cell.state.is_revealed = True
+        self.revealed_count += 1
+
+        if cell.state.is_mine:
+            self.game_over = True
+            self._reveal_all_mines()
+            return
+        
+        if cell.state.adjacent == 0:
+            for n_c, n_r in self.neighbors(col, row):
+                if self.is_inbounds(n_c, n_r):
+                    self.reveal(n_c, n_r)
+
+        self._check_win()
 
     def toggle_flag(self, col: int, row: int) -> None:
         # TODO: Toggle a flag on a non-revealed cell.
