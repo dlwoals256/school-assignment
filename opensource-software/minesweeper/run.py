@@ -116,32 +116,33 @@ class InputController:
         return -1, -1
 
     def handle_mouse(self, pos, button) -> None:
-        # TODO: Handle mouse button events: left=reveal, right=flag, middle=neighbor highlight  in here
-        # col, row = self.pos_to_grid(pos[0], pos[1])
-        # if col == -1:
-        #     return
-        # game = self.game
-        # if button == config.mouse_left:
-        #     game.highlight_targets.clear()
-        
-        #         if not game.started:
-        #             game.started = 
-        #             game.start_ticks_ms = pygame.time.get_ticks()
-    
-        # elif button == config.mouse_right:
-        #     game.highlight_targets.clear()
-        #        
-        # elif button == config.mouse_middle:
-        #         neighbors = []
-        #         game.highlight_targets = {
-        #             (nc, nr)
-        #             for (nc, nr) in neighbors
-        #             if not game.board.cells[game.board.index(nc, nr)].state.is_revealed
-        #         }
-        
-        #         game.highlight_until_ms = pygame.time.get_ticks() + config.highlight_duration_ms
+        col, row = self.pos_to_grid(pos[0], pos[1])
+        if col == -1 or row == -1:
+            return
 
-        pass
+        game = self.game
+        board = game.board
+
+        if button == config.mouse_left:
+            game.highlight_targets.clear()
+            board.reveal(col, row)
+            if not game.started:
+                game.started = True
+                game.start_ticks_ms = pygame.time.get_ticks()
+
+        elif button == config.mouse_right:
+            game.highlight_targets.clear()
+            board.toggle_flag(col, row)
+
+        elif button == config.mouse_middle:
+            neighbors = board.neighbors(col, row)
+            game.highlight_targets = {
+                (n_col, n_row)
+                for (n_col, n_row) in neighbors
+                if board.is_inbounds(n_col, n_row)
+                and not board.cells[board.index(n_col, n_row)].state.is_revealed
+            }
+            game.highlight_until_ms = pygame.time.get_ticks() + config.highlight_duration_ms
 
 class Game:
     """Main application object orchestrating loop and high-level state."""
