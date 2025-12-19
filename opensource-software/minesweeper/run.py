@@ -96,13 +96,12 @@ class Renderer:
         rect = label.get_rect(center=(config.width // 2, config.height // 2))
         self.screen.blit(label, rect)
 
-
 class InputController:
     """Translates input events into game and board actions."""
 
     def __init__(self, game: "Game"):
         self.game = game
-
+        
     def pos_to_grid(self, x: int, y: int):
         """Convert pixel coordinates to (col,row) grid indices or (-1,-1) if out of bounds."""
         if not (config.margin_left <= x < config.width - config.margin_right):
@@ -150,16 +149,61 @@ class Game:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption(config.title)
+        # 1. 초기 윈도우 생성 (메뉴용)
         self.screen = pygame.display.set_mode(config.display_dimension)
         self.clock = pygame.time.Clock()
-        self.board = Board(config.cols, config.rows, config.num_mines)
-        self.renderer = Renderer(self.screen, self.board)
+        
+        self.showing_menu = True
+        self.menu_buttons = []
+        
+        self.board = None
+        self.renderer = None
         self.input = InputController(self)
+        
         self.highlight_targets = set()
         self.highlight_until_ms = 0
         self.started = False
         self.start_ticks_ms = 0
         self.end_ticks_ms = 0
+
+        # 난이도 선택. ( issue #3 )
+    def select_difficulty(self, difficulty_name):
+        cfg = config.DIFFICULTIES[difficulty_name]
+        config.cols = cfg["cols"]
+        config.rows = cfg["rows"]
+        config.num_mines = cfg["mines"]
+        
+        # 화면 크기 재설정
+        config.width = config.margin_left + config.cols * config.cell_size + config.margin_right
+        config.height = config.margin_top + config.rows * config.cell_size + config.margin_bottom
+        self.screen = pygame.display.set_mode((config.width, config.height))
+        # issue #3 난이도 선택
+        self.board = Board(config.cols, config.rows, config.num_mines)
+        self.renderer = Renderer(self.screen, self.board)
+        self.showing_menu = False
+        self.reset()
+
+    # [ADDED] 메뉴 그리기
+    def draw_menu(self):
+        self.screen.fill(config.color_bg)
+        font = pygame.font.Font(config.font_name, 40)
+        self.menu_buttons = []
+
+        title_font = pygame.font.Font(config.font_name, 50)
+        title_surf = title_font.render("Minesweeper", True, config.color_header_text)
+        self.screen.blit(title_surf, (config.width // 2 - title_surf.get_width() // 2, 80))
+
+        for i, name in enumerate(config.DIFFICULTIES.keys()):
+            text_surf = font.render(name, True, config.color_header_text)
+            rect = text_surf.get_rect(center=(config.width // 2, 220 + i * 80))
+            
+            padding_rect = rect.inflate(60, 20)
+            is_hover = padding_rect.collidepoint(pygame.mouse.get_pos())
+            color = config.color_button_hover if is_hover else config.color_button
+            
+            pygame.draw.rect(self.screen, color, padding_rect, border_radius=10)
+            self.screen.blit(text_surf, rect)
+            self.menu_buttons.append((name, padding_rect))
 
     def reset(self):
         """Reset the game state and start a new board."""
@@ -215,17 +259,33 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return False
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_r:
-                    self.reset()
-            if event.type == pygame.MOUSEBUTTONDOWN:
-                self.input.handle_mouse(event.pos, event.button)
-        if (self.board.game_over or self.board.win) and self.started and not self.end_ticks_ms:
-            self.end_ticks_ms = pygame.time.get_ticks()
-        self.draw()
+            
+            # [수정] 메뉴 상태일 때의 입력 처리
+            if self.showing_menu:
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                    for name, rect in self.menu_buttons:
+                        if rect.collidepoint(event.pos):
+                            self.select_difficulty(name)
+            # [수정] 게임 중일 때의 입력 처리
+            else:
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_r:
+                        self.showing_menu = True # R 누르면 메뉴로 복귀
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    self.input.handle_mouse(event.pos, event.button)
+
+        # [수정] 화면 그리기 분기 처리
+        if self.showing_menu:
+            self.draw_menu()
+        else:
+            # 게임 종료 체크 (보드가 존재하고 게임이 시작되었을 때만 수행)
+            if (self.board.game_over or self.board.win) and self.started and not self.end_ticks_ms:
+                self.end_ticks_ms = pygame.time.get_ticks()
+            self.draw()
+            
+        pygame.display.flip()
         self.clock.tick(config.fps)
         return True
-
 
 def main() -> int:
     """Application entrypoint: run the main loop until quit."""

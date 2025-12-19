@@ -81,3 +81,11 @@ result_overlay_alpha = 120
 # Misc
 title = "Minesweeper"
 
+# 난이도 설정값
+DIFFICULTIES = {
+    "Easy": {"cols": 9, "rows": 9, "mines": 10},
+    "Normal": {"cols": 16, "rows": 16, "mines": 40},
+    "Hard": {"cols": 30, "rows": 16, "mines": 99}
+}
+color_button = (60, 65, 70)
+color_button_hover = (100,100,100)
