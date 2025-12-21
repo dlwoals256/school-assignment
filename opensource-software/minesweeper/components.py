@@ -68,19 +68,18 @@ class Board:
 
     def is_inbounds(self, col: int, row: int) -> bool:
         return 0 <= col < self.cols and 0 <= row < self.rows
-
+    
+    # Modified
     def neighbors(self, col: int, row: int) -> List[Tuple[int, int]]:
-        # NO needs for clearing center, that makes more complicated.
+        """Return a flat list of valid (col, row) neighbors."""
         result = []
         for i in range(-1, 2):
-            tmp = []
             for j in range(-1, 2):
-                if self.is_inbounds(col+j, row+i):
-                    tmp.append((col+j, row+i))
-                else:
-                    tmp.append((-1, -1))
-            result.append(tmp)
-
+                if i == 0 and j == 0:
+                    continue  # 자기 자신은 제외
+                n_c, n_r = col + j, row + i
+                if self.is_inbounds(n_c, n_r):
+                    result.append((n_c, n_r))
         return result
 
     def place_mines(self, safe_col: int, safe_row: int) -> None:
