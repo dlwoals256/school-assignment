@@ -78,8 +78,8 @@ class Renderer:
             config.color_header,
             Rect(0, 0, config.width, config.margin_top - 4),
         )
-        left_text = f"Mines: {remaining_mines}"
-        right_text = f"Time: {time_text}"
+        left_text = f"Time: {time_text}"
+        right_text = f"Mines: {remaining_mines}"
         left_label = self.header_font.render(left_text, True, config.color_header_text)
         right_label = self.header_font.render(right_text, True, config.color_header_text)
         self.screen.blit(left_label, (10, 12))
@@ -101,7 +101,7 @@ class InputController:
 
     def __init__(self, game: "Game"):
         self.game = game
-        
+
     def pos_to_grid(self, x: int, y: int):
         """Convert pixel coordinates to (col,row) grid indices or (-1,-1) if out of bounds."""
         if not (config.margin_left <= x < config.width - config.margin_right):
