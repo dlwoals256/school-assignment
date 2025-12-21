@@ -87,7 +87,6 @@ class Board:
         forbidden = {(safe_col, safe_row)} | set(self.neighbors(safe_col, safe_row))
         pool = [p for p in all_positions if p not in forbidden]
         random.shuffle(pool)
-
         # Place mines
         mine_pos = pool[:self.num_mines]
         for c, r in mine_pos:
