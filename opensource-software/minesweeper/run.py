@@ -271,6 +271,12 @@ class Game:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_r:
                         self.showing_menu = True # R 누르면 메뉴로 복귀
+                    elif event.key == pygame.K_s:
+                        self.board.save_to_file()
+                        print("Game Saved")
+                    elif event.key ==pygame.K_l:
+                        self.load_game()
+                        print("Game Loaded")
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     self.input.handle_mouse(event.pos, event.button)
 
@@ -286,6 +292,65 @@ class Game:
         pygame.display.flip()
         self.clock.tick(config.fps)
         return True
+    def save_game(self):
+        """현재 상태를 JSON으로 저장"""
+        if not self.board: return
+        data = self.board.to_dict()
+        data["elapsed_ms"] = self._elapsed_ms() # 현재 흐른 시간 저장
+        with open("save_game.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4)
+        print("Game Saved")
+    def save_game(self):
+        """현재 상태를 JSON으로 저장"""
+        if not self.board: return
+        data = self.board.to_dict()
+        data["elapsed_ms"] = self._elapsed_ms() # 현재 흐른 시간 저장
+        with open("save_game.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4)
+        print("Game Saved")
+
+    def load_game(self):
+        """savegame.json 파일에서 데이터를 읽어와 게임 상태를 완전히 복구함"""
+        # 1. 먼저 components.py에 만든 클래스 메서드로 보드 데이터를 가져옴
+        loaded_board = Board.load_from_file("savegame.json")
+        
+        if loaded_board:
+            # 2. 보드 교체
+            self.board = loaded_board
+            
+            # 3. 보드 크기에 맞춰 시스템 설정(config)과 화면 크기 강제 재설정
+            config.cols = self.board.cols
+            config.rows = self.board.rows
+            config.num_mines = self.board.num_mines
+            config.width = config.margin_left + config.cols * config.cell_size + config.margin_right
+            config.height = config.margin_top + config.rows * config.cell_size + config.margin_bottom
+            self.screen = pygame.display.set_mode((config.width, config.height))
+            
+            # 4. 중요: 렌더러가 '새로운 보드 객체'를 그리도록 새로 생성
+            self.renderer = Renderer(self.screen, self.board)
+            
+            # 5. 타이머 복구 (savegame.json 파일 다시 열어서 시간 데이터만 추출)
+            try:
+                with open("savegame.json", "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    saved_ms = data.get("elapsed_ms", 0)
+                    # 현재 시간에서 저장된 시간을 빼서 타이머 시작점을 과거로 돌림
+                    self.start_ticks_ms = pygame.time.get_ticks() - saved_ms
+            except:
+                self.start_ticks_ms = pygame.time.get_ticks()
+
+            self.started = True
+            
+            # 6. 게임 종료 상태였다면 타이머 멈춤 고정
+            if self.board.game_over or self.board.win:
+                self.end_ticks_ms = pygame.time.get_ticks()
+            else:
+                self.end_ticks_ms = 0
+
+            self.showing_menu = False
+            print("불러오기 성공!")
+        else:
+            print("저장된 파일을 찾을 수 없거나 불러오기에 실패했습니다.")
 
 def main() -> int:
     """Application entrypoint: run the main loop until quit."""
@@ -295,7 +360,6 @@ def main() -> int:
         running = game.run_step()
     pygame.quit()
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

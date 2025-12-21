@@ -14,7 +14,7 @@ rendering, timing, or input devices.
 
 import random
 from typing import List, Tuple
-
+import json
 
 class CellState:
     """Mutable state of a single cell.
@@ -161,3 +161,64 @@ class Board:
             for cell in self.cells:
                 if not cell.state.is_revealed and not cell.state.is_mine:
                     cell.state.is_revealed = True
+    def to_dict(self):
+        """현재 보드 상태를 딕셔너리로 변환"""
+        return {
+            "cols": self.cols,
+            "rows": self.rows,
+            "num_mines": self.num_mines,
+            "mines_placed": self._mines_placed,
+            "revealed_count": self.revealed_count,
+            "game_over": self.game_over,
+            "win": self.win,
+            "cells": [
+                {
+                    "col": c.col,
+                    "row": c.row,
+                    "is_mine": c.state.is_mine,
+                    "is_revealed": c.state.is_revealed,
+                    "is_flagged": c.state.is_flagged,
+                    "adjacent": c.state.adjacent
+                } for c in self.cells
+            ]
+        }
+    def from_dict(self, data):
+        """딕셔너리 데이터를 읽어와서 보드 상태 복구"""
+        self.cols = data["cols"]
+        self.rows = data["rows"]
+        self.num_mines = data["num_mines"]
+        self._mines_placed = data["mines_placed"]
+        self.revealed_count = data["revealed_count"]
+        self.game_over = data["game_over"]
+        self.win = data["win"]
+        
+        self.cells = []
+        for c_data in data["cells"]:
+            cell = Cell(c_data["col"], c_data["row"])
+            cell.state.is_mine = c_data["is_mine"]
+            cell.state.is_revealed = c_data["is_revealed"]
+            cell.state.is_flagged = c_data["is_flagged"]
+            cell.state.adjacent = c_data["adjacent"]
+            self.cells.append(cell)
+
+    def save_to_file(self, filename="savegame.json"):
+        """보드 상태를 JSON 파일로 저장 (오류 수정 버전)"""
+        try:
+            with open(filename, 'w', encoding='utf-8') as f:
+                # self.to_dict()가 반환하는 딕셔너리를 파일 f에 기록
+                json.dump(self.to_dict(), f, indent=4)
+            print(f"Game saved to {filename}")
+        except Exception as e:
+            print(f"Save failed: {e}")
+    @classmethod
+    def load_from_file(cls, filename="savegame.json"):
+        """JSON 파일로부터 보드 객체 생성 및 복구"""
+        try:
+            with open(filename, 'r') as f:
+                data = json.load(f)
+            board = cls(data["cols"], data["rows"], data["num_mines"])
+            board.from_dict(data)
+            return board
+        except FileNotFoundError:
+            return None
+        
