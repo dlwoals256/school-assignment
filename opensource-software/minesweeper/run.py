@@ -92,8 +92,14 @@ class Renderer:
         overlay = pygame.Surface((config.width, config.height), pygame.SRCALPHA)
         overlay.fill((0, 0, 0, config.result_overlay_alpha))
         self.screen.blit(overlay, (0, 0))
+        
+        color = (0, 255, 127) if "WIN" in text.upper() else (255, 50, 50)
         label = self.result_font.render(text, True, config.color_result)
+
         rect = label.get_rect(center=(config.width // 2, config.height // 2))
+        padding_rect = rect.inflate(50, 30)
+        pygame.draw.rect(self.screen, (20, 20, 20), padding_rect, border_radius=15) 
+        pygame.draw.rect(self.screen, color, padding_rect, 3, border_radius=15)     
         self.screen.blit(label, rect)
 
 class InputController:
@@ -233,9 +239,9 @@ class Game:
     def _result_text(self) -> str | None:
         """Return result label to display, or None if game continues."""
         if self.board.game_over:
-            return "GAME OVER"
+            return "Lose..."
         if self.board.win:
-            return "GAME CLEAR"
+            return "WIN!"
         return None
 
     def draw(self):

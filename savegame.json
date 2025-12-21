@@ -3,7 +3,7 @@
     "rows": 16,
     "num_mines": 40,
     "mines_placed": true,
-    "revealed_count": 22,
+    "revealed_count": 85,
     "game_over": false,
     "win": false,
     "cells": [
@@ -13,15 +13,15 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 1,
             "row": 0,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 2,
@@ -45,18 +45,10 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 2
         },
         {
             "col": 5,
-            "row": 0,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 6,
             "row": 0,
             "is_mine": true,
             "is_revealed": false,
@@ -64,12 +56,20 @@
             "adjacent": 0
         },
         {
-            "col": 7,
+            "col": 6,
             "row": 0,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 3
+        },
+        {
+            "col": 7,
+            "row": 0,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
         },
         {
             "col": 8,
@@ -77,7 +77,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 9,
@@ -93,7 +93,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 11,
@@ -101,7 +101,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 12,
@@ -117,7 +117,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 1
         },
         {
             "col": 14,
@@ -125,7 +125,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 1
         },
         {
             "col": 15,
@@ -133,34 +133,26 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 0,
             "row": 1,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 1,
             "row": 1,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 2
         },
         {
             "col": 2,
-            "row": 1,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 3,
             "row": 1,
             "is_mine": false,
             "is_revealed": false,
@@ -168,6 +160,14 @@
             "adjacent": 3
         },
         {
+            "col": 3,
+            "row": 1,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
             "col": 4,
             "row": 1,
             "is_mine": false,
@@ -181,42 +181,10 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 2
         },
         {
             "col": 6,
-            "row": 1,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 7,
-            "row": 1,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 8,
-            "row": 1,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 9,
-            "row": 1,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 10,
             "row": 1,
             "is_mine": true,
             "is_revealed": false,
@@ -224,39 +192,7 @@
             "adjacent": 0
         },
         {
-            "col": 11,
-            "row": 1,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 12,
-            "row": 1,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 13,
-            "row": 1,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 14,
-            "row": 1,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 15,
+            "col": 7,
             "row": 1,
             "is_mine": false,
             "is_revealed": false,
@@ -264,104 +200,40 @@
             "adjacent": 3
         },
         {
-            "col": 0,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 1,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 2,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 3,
-            "row": 2,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 4,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 5,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 6,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 7,
-            "row": 2,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
             "col": 8,
-            "row": 2,
-            "is_mine": false,
+            "row": 1,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 0
         },
         {
             "col": 9,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 10,
-            "row": 2,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 11,
-            "row": 2,
+            "row": 1,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 1
         },
         {
+            "col": 10,
+            "row": 1,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 11,
+            "row": 1,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
             "col": 12,
-            "row": 2,
+            "row": 1,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -369,6 +241,70 @@
         },
         {
             "col": 13,
+            "row": 1,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 14,
+            "row": 1,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 15,
+            "row": 1,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 0,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 2,
+            "row": 2,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 4,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 5,
             "row": 2,
             "is_mine": false,
             "is_revealed": false,
@@ -376,7 +312,79 @@
             "adjacent": 3
         },
         {
+            "col": 6,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 7,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 8,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 9,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 10,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 11,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 12,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 13,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
             "col": 14,
+            "row": 2,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 15,
             "row": 2,
             "is_mine": true,
             "is_revealed": false,
@@ -384,92 +392,84 @@
             "adjacent": 0
         },
         {
-            "col": 15,
-            "row": 2,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
             "col": 0,
             "row": 3,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 1,
             "row": 3,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 1
         },
         {
             "col": 2,
             "row": 3,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 1
         },
         {
             "col": 3,
             "row": 3,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 2
         },
         {
             "col": 4,
             "row": 3,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 5,
-            "row": 3,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 6,
-            "row": 3,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 7,
-            "row": 3,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 8,
-            "row": 3,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 9,
             "row": 3,
             "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 0
+        },
+        {
+            "col": 6,
+            "row": 3,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 7,
+            "row": 3,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 3,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 9,
+            "row": 3,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
         },
         {
             "col": 10,
@@ -477,7 +477,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 2
         },
         {
             "col": 11,
@@ -485,7 +485,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 12,
@@ -493,7 +493,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 13,
@@ -522,13 +522,45 @@
         {
             "col": 0,
             "row": 4,
-            "is_mine": true,
-            "is_revealed": false,
+            "is_mine": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 0
         },
         {
             "col": 1,
+            "row": 4,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 2,
+            "row": 4,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 4,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 4,
+            "row": 4,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 5,
             "row": 4,
             "is_mine": false,
             "is_revealed": false,
@@ -536,81 +568,49 @@
             "adjacent": 3
         },
         {
-            "col": 2,
-            "row": 4,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 3,
-            "row": 4,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 4,
-            "row": 4,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 5,
-            "row": 4,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
             "col": 6,
             "row": 4,
-            "is_mine": true,
-            "is_revealed": false,
+            "is_mine": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 7,
             "row": 4,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 8,
             "row": 4,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 9,
             "row": 4,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 1
         },
         {
             "col": 10,
             "row": 4,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 11,
             "row": 4,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 0
@@ -621,7 +621,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 13,
@@ -629,12 +629,12 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 14,
             "row": 4,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 0
@@ -645,10 +645,50 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 0,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 2,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 4,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 5,
             "row": 5,
             "is_mine": true,
             "is_revealed": false,
@@ -656,311 +696,263 @@
             "adjacent": 0
         },
         {
-            "col": 1,
+            "col": 6,
             "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 7,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 9,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 10,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 11,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 12,
+            "row": 5,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 13,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 14,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 15,
+            "row": 5,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 0,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 2,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 3,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 4,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 5,
+            "row": 6,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 6,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 7,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 9,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 10,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 11,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 12,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 13,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 14,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 15,
+            "row": 6,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 0,
+            "row": 7,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 7,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 2,
+            "row": 7,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 7,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 4,
+            "row": 7,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 3
         },
         {
-            "col": 2,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 3,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 4,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
             "col": 5,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 6,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 7,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 8,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 9,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 10,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 11,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 12,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 13,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 14,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 15,
-            "row": 5,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 0,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 1,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 2,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 3,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 4,
-            "row": 6,
+            "row": 7,
             "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 0
         },
         {
-            "col": 5,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
             "col": 6,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 7,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 8,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 9,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 10,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 11,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 12,
-            "row": 6,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 13,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 14,
-            "row": 6,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 15,
-            "row": 6,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 0,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 1,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 2,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 3,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 4,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 5,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 6,
-            "row": 7,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 7,
             "row": 7,
             "is_mine": false,
             "is_revealed": true,
@@ -968,36 +960,44 @@
             "adjacent": 3
         },
         {
+            "col": 7,
+            "row": 7,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
             "col": 8,
             "row": 7,
-            "is_mine": true,
-            "is_revealed": false,
+            "is_mine": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 9,
             "row": 7,
-            "is_mine": true,
-            "is_revealed": false,
+            "is_mine": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 10,
             "row": 7,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 4
+            "adjacent": 1
         },
         {
             "col": 11,
             "row": 7,
-            "is_mine": true,
-            "is_revealed": false,
+            "is_mine": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 12,
@@ -1005,7 +1005,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 1
         },
         {
             "col": 13,
@@ -1013,7 +1013,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 0
         },
         {
             "col": 14,
@@ -1026,16 +1026,16 @@
         {
             "col": 15,
             "row": 7,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 0,
             "row": 8,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 0
         },
@@ -1043,9 +1043,9 @@
             "col": 1,
             "row": 8,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 2,
@@ -1053,7 +1053,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 3,
@@ -1061,26 +1061,10 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 4,
-            "row": 8,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 5,
-            "row": 8,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 6,
             "row": 8,
             "is_mine": true,
             "is_revealed": false,
@@ -1088,7 +1072,7 @@
             "adjacent": 0
         },
         {
-            "col": 7,
+            "col": 5,
             "row": 8,
             "is_mine": false,
             "is_revealed": false,
@@ -1096,6 +1080,22 @@
             "adjacent": 3
         },
         {
+            "col": 6,
+            "row": 8,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 7,
+            "row": 8,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
             "col": 8,
             "row": 8,
             "is_mine": true,
@@ -1106,26 +1106,26 @@
         {
             "col": 9,
             "row": 8,
-            "is_mine": true,
+            "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 10,
-            "row": 8,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 11,
             "row": 8,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 2
+        },
+        {
+            "col": 11,
+            "row": 8,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
         },
         {
             "col": 12,
@@ -1141,7 +1141,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 14,
@@ -1163,7 +1163,7 @@
             "col": 0,
             "row": 9,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 0
         },
@@ -1171,9 +1171,9 @@
             "col": 1,
             "row": 9,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 1
         },
         {
             "col": 2,
@@ -1186,318 +1186,62 @@
         {
             "col": 3,
             "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 4,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 5,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 6,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 7,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 8,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 3
-        },
-        {
-            "col": 9,
-            "row": 9,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 10,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 4
-        },
-        {
-            "col": 11,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 12,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 13,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 14,
-            "row": 9,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 15,
-            "row": 9,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 0,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 1,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 2,
-            "row": 10,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 3
         },
         {
-            "col": 3,
-            "row": 10,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
             "col": 4,
-            "row": 10,
-            "is_mine": true,
+            "row": 9,
+            "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         },
         {
             "col": 5,
-            "row": 10,
+            "row": 9,
             "is_mine": false,
-            "is_revealed": true,
+            "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 3
         },
         {
             "col": 6,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 7,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 8,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 9,
-            "row": 10,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 10,
-            "row": 10,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 11,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 12,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 13,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 14,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 15,
-            "row": 10,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 0,
-            "row": 11,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 1,
-            "row": 11,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 2,
-            "row": 11,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 3,
-            "row": 11,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 4
-        },
-        {
-            "col": 4,
-            "row": 11,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 5,
-            "row": 11,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 6,
-            "row": 11,
-            "is_mine": false,
-            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 1
         },
         {
             "col": 7,
-            "row": 11,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 8,
-            "row": 11,
-            "is_mine": false,
-            "is_revealed": true,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 9,
-            "row": 11,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 2
         },
         {
+            "col": 8,
+            "row": 9,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 9,
+            "row": 9,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
             "col": 10,
-            "row": 11,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1505,23 +1249,23 @@
         },
         {
             "col": 11,
-            "row": 11,
-            "is_mine": true,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 12,
-            "row": 11,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 2
         },
         {
+            "col": 12,
+            "row": 9,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
             "col": 13,
-            "row": 11,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1529,7 +1273,7 @@
         },
         {
             "col": 14,
-            "row": 11,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1537,7 +1281,7 @@
         },
         {
             "col": 15,
-            "row": 11,
+            "row": 9,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1545,51 +1289,307 @@
         },
         {
             "col": 0,
-            "row": 12,
+            "row": 10,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 0
         },
         {
             "col": 1,
-            "row": 12,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 2,
+            "row": 10,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 10,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 3
         },
         {
+            "col": 4,
+            "row": 10,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 5,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 6,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 7,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 9,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 10,
+            "row": 10,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 11,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 12,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 13,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 14,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 15,
+            "row": 10,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 0,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
             "col": 2,
-            "row": 12,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 3,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 4,
+            "row": 11,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 5,
+            "row": 11,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 3
         },
         {
-            "col": 3,
-            "row": 12,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 2
-        },
-        {
-            "col": 4,
-            "row": 12,
+            "col": 6,
+            "row": 11,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 1
         },
         {
-            "col": 5,
-            "row": 12,
+            "col": 7,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 9,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 10,
+            "row": 11,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 2
+        },
+        {
+            "col": 11,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 12,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 13,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 14,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 15,
+            "row": 11,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 0,
+            "row": 12,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 12,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 2,
+            "row": 12,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 12,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 4,
+            "row": 12,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 5,
+            "row": 12,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
         },
         {
             "col": 6,
@@ -1602,7 +1602,7 @@
         {
             "col": 7,
             "row": 12,
-            "is_mine": true,
+            "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 0
@@ -1610,7 +1610,7 @@
         {
             "col": 8,
             "row": 12,
-            "is_mine": true,
+            "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 0
@@ -1621,7 +1621,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 10,
@@ -1629,7 +1629,7 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 2
+            "adjacent": 1
         },
         {
             "col": 11,
@@ -1650,10 +1650,10 @@
         {
             "col": 13,
             "row": 12,
-            "is_mine": false,
+            "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 14,
@@ -1669,21 +1669,21 @@
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 0,
             "row": 13,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 1,
             "row": 13,
-            "is_mine": true,
-            "is_revealed": false,
+            "is_mine": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 0
         },
@@ -1691,15 +1691,15 @@
             "col": 2,
             "row": 13,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 0
         },
         {
             "col": 3,
             "row": 13,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
             "adjacent": 0
         },
@@ -1707,20 +1707,12 @@
             "col": 4,
             "row": 13,
             "is_mine": false,
-            "is_revealed": false,
+            "is_revealed": true,
             "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 3
         },
         {
             "col": 5,
-            "row": 13,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 6,
             "row": 13,
             "is_mine": true,
             "is_revealed": false,
@@ -1728,7 +1720,7 @@
             "adjacent": 0
         },
         {
-            "col": 7,
+            "col": 6,
             "row": 13,
             "is_mine": false,
             "is_revealed": false,
@@ -1736,7 +1728,55 @@
             "adjacent": 3
         },
         {
+            "col": 7,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
             "col": 8,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 9,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 10,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 11,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 12,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 13,
             "row": 13,
             "is_mine": false,
             "is_revealed": false,
@@ -1744,8 +1784,96 @@
             "adjacent": 2
         },
         {
-            "col": 9,
+            "col": 14,
             "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 15,
+            "row": 13,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 0,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 2,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 4,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 5,
+            "row": 14,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 6,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 7,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 9,
+            "row": 14,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1753,7 +1881,7 @@
         },
         {
             "col": 10,
-            "row": 13,
+            "row": 14,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1761,7 +1889,7 @@
         },
         {
             "col": 11,
-            "row": 13,
+            "row": 14,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
@@ -1769,23 +1897,151 @@
         },
         {
             "col": 12,
-            "row": 13,
+            "row": 14,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 1
+            "adjacent": 2
         },
         {
             "col": 13,
-            "row": 13,
+            "row": 14,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 14,
+            "row": 14,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
+            "col": 15,
+            "row": 14,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 0,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 1,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 2,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 3,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 4,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": true,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 5,
+            "row": 15,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 6,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 2
+        },
+        {
+            "col": 7,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 8,
+            "row": 15,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
             "adjacent": 1
         },
         {
+            "col": 9,
+            "row": 15,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 10,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 11,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 1
+        },
+        {
+            "col": 12,
+            "row": 15,
+            "is_mine": true,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 0
+        },
+        {
+            "col": 13,
+            "row": 15,
+            "is_mine": false,
+            "is_revealed": false,
+            "is_flagged": false,
+            "adjacent": 3
+        },
+        {
             "col": 14,
-            "row": 13,
+            "row": 15,
             "is_mine": true,
             "is_revealed": false,
             "is_flagged": false,
@@ -1793,267 +2049,11 @@
         },
         {
             "col": 15,
-            "row": 13,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 0,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 1,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 2,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 3,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 4,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 5,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 6,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 7,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 8,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 9,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 10,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 11,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 12,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 13,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 14,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 15,
-            "row": 14,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 1
-        },
-        {
-            "col": 0,
             "row": 15,
             "is_mine": false,
             "is_revealed": false,
             "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 1,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 2,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 3,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 4,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 5,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 6,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 7,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 8,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 9,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 10,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 11,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 12,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 13,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 14,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
-        },
-        {
-            "col": 15,
-            "row": 15,
-            "is_mine": false,
-            "is_revealed": false,
-            "is_flagged": false,
-            "adjacent": 0
+            "adjacent": 2
         }
     ]
 }
