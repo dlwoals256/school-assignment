@@ -78,8 +78,8 @@ class Renderer:
             config.color_header,
             Rect(0, 0, config.width, config.margin_top - 4),
         )
-        left_text = f"Time: {time_text}"
-        right_text = f"Mines: {remaining_mines}"
+        left_text = f"Mines: {time_text}"
+        right_text = f"Time: {remaining_mines}"
         left_label = self.header_font.render(left_text, True, config.color_header_text)
         right_label = self.header_font.render(right_text, True, config.color_header_text)
         self.screen.blit(left_label, (10, 12))
